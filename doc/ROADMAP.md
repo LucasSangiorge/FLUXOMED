@@ -8,15 +8,17 @@ Fluxo do domínio: Chegada → Recepção → Cadastro → Triagem → Classific
 - [x] Estrutura de pastas do projeto
 - [x] Ambiente virtual (venv)
 - [x] Git iniciado + `.gitignore`
-- [ ] Repositório criado no GitHub
-- [ ] Primeiro push (estrutura inicial)
+- [x] Repositório criado no GitHub
+- [x] Primeiro push (estrutura inicial)
 
 ## Fase 1 — Base do backend
-- [ ] Instalar FastAPI, Uvicorn, SQLAlchemy, Alembic, driver PostgreSQL
-- [ ] `requirements.txt` preenchido
-- [ ] `app/main.py` — aplicação FastAPI rodando ("Hello World")
-- [ ] `app/database.py` — conexão com PostgreSQL
-- [ ] `.env` com credenciais do banco (fora do git)
+- [x] Instalar FastAPI, Uvicorn, SQLAlchemy, Alembic, driver PostgreSQL
+- [x] `requirements.txt` preenchido
+- [x] Banco PostgreSQL criado no Neon (usado desde o desenvolvimento, não só no deploy)
+- [x] `.env.example` (modelo de variáveis, vai pro GitHub)
+- [x] `.env` com credenciais reais do Neon (fora do git)
+- [x] `app/main.py` — aplicação FastAPI rodando ("Hello World")
+- [x] `app/database.py` — conexão com o Neon
 
 ## Fase 2 — Modelagem do banco de dados
 - [ ] Model: Paciente (cadastro)
@@ -53,7 +55,6 @@ Fluxo do domínio: Chegada → Recepção → Cadastro → Triagem → Classific
 - [ ] README do projeto (o que é, como rodar, prints da documentação)
 
 ## Fase 7 — Deploy gratuito
-- [ ] Banco PostgreSQL na nuvem (Neon ou Supabase, plano free)
 - [ ] Deploy da API (Render, plano free)
 - [ ] Testar API publicada
 
