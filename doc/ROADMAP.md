@@ -21,15 +21,14 @@ Fluxo do domínio: Chegada → Recepção → Cadastro → Triagem → Classific
 - [x] `app/database.py` — conexão com o Neon
 
 ## Fase 2 — Modelagem do banco de dados
-- [ ] Model: Paciente (cadastro)
-- [ ] Model: Atendimento (representa a "Chegada", liga tudo)
-- [ ] Model: Triagem
-- [ ] Model: ClassificacaoRisco
-- [ ] Model: Consulta
-- [ ] Model: Exame
-- [ ] Model: Medicacao
-- [ ] Model: Alta
-- [ ] Migrations com Alembic (histórico versionado do banco)
+- [x] Model: Paciente (cadastro, com convênio fixo: Unimed, Bradesco Saúde, SulAmérica)
+- [x] Model: Atendimento (representa a "Chegada" + senha/token, liga tudo)
+- [x] Model: Triagem (sintomas, pressão arterial e cor de classificação de risco: Amarelo/Laranja/Vermelho — já inclui a classificação de risco, sem tabela separada)
+- [x] Model: Consulta
+- [x] Model: Exame (tipo fixo: Hemograma, Raio-X, ECG)
+- [x] Model: Medicamento (tipo fixo: Dipirona, Paracetamol, Ondansetrona, Buscopan)
+- [x] Model: Alta
+- [x] Migrations com Alembic (histórico versionado do banco)
 
 ## Fase 3 — Schemas (Pydantic)
 - [ ] Schema de entrada/saída para cada entidade acima
