@@ -31,7 +31,7 @@ Fluxo do domínio: Chegada → Recepção → Cadastro → Triagem → Classific
 - [x] Migrations com Alembic (histórico versionado do banco)
 
 ## Fase 3 — Schemas (Pydantic)
-- [ ] Schema de entrada/saída para cada entidade acima
+- [x] Schema de entrada/saída para cada entidade acima (Paciente, Atendimento, Triagem, Consulta, Exame, Medicamento, Alta)
 
 ## Fase 4 — Endpoints (routers), um por etapa do fluxo
 - [ ] Recepção / Chegada — registrar entrada do paciente
