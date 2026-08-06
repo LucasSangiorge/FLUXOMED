@@ -15,6 +15,6 @@ class Paciente(Base):
     data_nascimento    = Column (Date, nullable=False)
     cpf                = Column (String, unique=True, nullable=False)
     telefone           = Column (String, nullable= False)
-    convenio          = Column  (Enum(ConvenioEnum), nullable=False)
+    convenio           = Column  (Enum(ConvenioEnum), nullable=False)
     numero_carteirinha = Column (String, nullable=False)
     
