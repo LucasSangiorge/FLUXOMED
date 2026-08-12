@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>FluxoMed</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>FluxoMed</h1>
+    <p>Fluxo de Pronto Socorro — Chegada → Triagem → Fila de Espera → Consulta → Exames → Medicação → Alta</p>
+  </header>
+
+  <main>
+
+    <section class="card">
+      <h2>1. Cadastro de Paciente</h2>
+      <form id="form-paciente">
+        <input type="text" id="paciente-nome" placeholder="Nome completo" required>
+        <input type="date" id="paciente-nascimento" required>
+        <input type="text" id="paciente-cpf" placeholder="CPF" required>
+        <input type="text" id="paciente-telefone" placeholder="Telefone" required>
+        <select id="paciente-convenio" required>
+          <option value="">Convênio</option>
+          <option value="Unimed">Unimed</option>
+          <option value="Bradesco Saúde">Bradesco Saúde</option>
+          <option value="SulAmérica">SulAmérica</option>
+        </select>
+        <input type="text" id="paciente-carteirinha" placeholder="Número da carteirinha" required>
+        <button type="submit">Cadastrar Paciente</button>
+      </form>
+      <p id="msg-paciente" class="msg"></p>
+    </section>
+
+    <section class="card">
+      <h2>2. Registrar Chegada (Atendimento)</h2>
+      <form id="form-atendimento">
+        <input type="number" id="atendimento-paciente-id" placeholder="ID do paciente" required>
+        <input type="text" id="atendimento-senha" placeholder="Senha (ex: A001)" required>
+        <button type="submit">Registrar Chegada</button>
+      </form>
+      <p id="msg-atendimento" class="msg"></p>
+    </section>
+
+    <section class="card">
+      <h2>3. Triagem</h2>
+      <form id="form-triagem">
+        <input type="number" id="triagem-atendimento-id" placeholder="ID do atendimento" required>
+        <input type="text" id="triagem-sintomas" placeholder="Sintomas" required>
+        <input type="text" id="triagem-pressao" placeholder="Pressão arterial (ex: 120/80)" required>
+        <select id="triagem-cor" required>
+          <option value="">Classificação de risco</option>
+          <option value="Vermelho">Vermelho</option>
+          <option value="Laranja">Laranja</option>
+          <option value="Amarelo">Amarelo</option>
+        </select>
+        <button type="submit">Registrar Triagem</button>
+      </form>
+      <p id="msg-triagem" class="msg"></p>
+    </section>
+
+    <section class="card">
+      <h2>4. Fila de Espera</h2>
+      <button id="btn-fila">Atualizar Fila</button>
+      <table id="tabela-fila">
+        <thead>
+          <tr>
+            <th>Atendimento</th>
+            <th>Paciente</th>
+            <th>Senha</th>
+            <th>Risco</th>
+            <th>Chegada</th>
+          </tr>
+        </thead>
+        <tbody id="corpo-fila"></tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>5. Consulta Médica</h2>
+      <form id="form-consulta">
+        <input type="number" id="consulta-atendimento-id" placeholder="ID do atendimento" required>
+        <textarea id="consulta-descricao" placeholder="Descrição médica" required></textarea>
+        <button type="submit">Registrar Consulta</button>
+      </form>
+      <p id="msg-consulta" class="msg"></p>
+    </section>
+
+    <section class="card">
+      <h2>6. Exame</h2>
+      <form id="form-exame">
+        <input type="number" id="exame-atendimento-id" placeholder="ID do atendimento" required>
+        <select id="exame-tipo" required>
+          <option value="">Tipo de exame</option>
+          <option value="Hemograma">Hemograma</option>
+          <option value="Raio-X">Raio-X</option>
+          <option value="ECG">ECG</option>
+        </select>
+        <input type="text" id="exame-resultado" placeholder="Resultado (opcional)">
+        <button type="submit">Solicitar Exame</button>
+      </form>
+      <p id="msg-exame" class="msg"></p>
+    </section>
+
+    <section class="card">
+      <h2>7. Medicamento</h2>
+      <form id="form-medicamento">
+        <input type="number" id="medicamento-atendimento-id" placeholder="ID do atendimento" required>
+        <select id="medicamento-nome" required>
+          <option value="">Medicamento</option>
+          <option value="Dipirona">Dipirona</option>
+          <option value="Paracetamol">Paracetamol</option>
+          <option value="Buscopan">Buscopan</option>
+          <option value="Ondansetrona">Ondansetrona</option>
+        </select>
+        <input type="text" id="medicamento-dosagem" placeholder="Dosagem" required>
+        <button type="submit">Registrar Medicação</button>
+      </form>
+      <p id="msg-medicamento" class="msg"></p>
+    </section>
+
+    <section class="card">
+      <h2>8. Alta Hospitalar</h2>
+      <form id="form-alta">
+        <input type="number" id="alta-atendimento-id" placeholder="ID do atendimento" required>
+        <textarea id="alta-observacoes" placeholder="Observações (opcional)"></textarea>
+        <button type="submit">Dar Alta</button>
+      </form>
+      <p id="msg-alta" class="msg"></p>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

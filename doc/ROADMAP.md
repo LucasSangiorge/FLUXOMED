@@ -34,15 +34,21 @@ Fluxo do domínio: Chegada → Recepção → Cadastro → Triagem → Classific
 - [x] Schema de entrada/saída para cada entidade acima (Paciente, Atendimento, Triagem, Consulta, Exame, Medicamento, Alta)
 
 ## Fase 4 — Endpoints (routers), um por etapa do fluxo
-- [ ] Recepção / Chegada — registrar entrada do paciente
-- [ ] Cadastro — criar/consultar paciente
-- [ ] Triagem — registrar sinais vitais, sintomas
-- [ ] Classificação de Risco — definir cor/prioridade (protocolo Manchester simplificado)
-- [ ] Fila de Espera — listar pacientes aguardando, ordenados por risco
-- [ ] Consulta Médica — registrar atendimento médico
-- [ ] Exames — solicitar/registrar resultado
-- [ ] Medicação — registrar medicação aplicada
-- [ ] Alta Hospitalar — encerrar o atendimento
+- [x] Recepção / Chegada — registrar entrada do paciente
+- [x] Cadastro — criar/consultar paciente
+- [x] Triagem — registrar sinais vitais, sintomas
+- [x] Classificação de Risco — definir cor/prioridade (protocolo Manchester simplificado)
+- [x] Fila de Espera — listar pacientes aguardando, ordenados por risco
+- [x] Consulta Médica — registrar atendimento médico
+- [x] Exames — solicitar/registrar resultado
+- [x] Medicação — registrar medicação aplicada
+- [x] Alta Hospitalar — encerrar o atendimento
+
+## Fase 4.5 — Frontend básico (adiantado)
+- [x] Página HTML simples consumindo a API (cadastro, chegada, triagem, fila de espera, consulta, exame, medicamento, alta)
+- [x] CSS básico
+- [x] JS puro com fetch, sem framework
+- [x] CORS habilitado na API para o frontend local
 
 ## Fase 5 — Regras de negócio (services)
 - [ ] Ordenação automática da fila por classificação de risco
