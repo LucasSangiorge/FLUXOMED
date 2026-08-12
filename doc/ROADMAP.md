@@ -51,18 +51,18 @@ Fluxo do domínio: Chegada → Recepção → Cadastro → Triagem → Classific
 - [x] CORS habilitado na API para o frontend local
 
 ## Fase 5 — Regras de negócio (services)
-- [ ] Ordenação automática da fila por classificação de risco
-- [ ] Validações de transição de status (ex: não pode dar alta sem consulta)
+- [x] Ordenação automática da fila por classificação de risco
+- [x] Validações de transição de status (não pode dar alta sem consulta; alta marca o atendimento como Concluído)
 
 ## Fase 6 — Qualidade
-- [ ] Testes básicos dos principais endpoints
-- [ ] Documentação automática (Swagger, já vem com FastAPI)
-- [ ] README do projeto (o que é, como rodar, prints da documentação)
+- [x] Testes básicos dos principais endpoints (Pytest + TestClient, banco SQLite em memória)
+- [x] Documentação automática (Swagger, já vem com FastAPI)
+- [x] README do projeto (o que é, como rodar, estrutura)
 
 ## Fase 7 — Deploy gratuito
-- [ ] Deploy da API (Render, plano free)
+- [ ] Deploy da API (Render, plano free) — precisa de conta conectada ao GitHub, feito manualmente
 - [ ] Testar API publicada
 
 ## Fase 8 — Portfólio
-- [ ] Repositório GitHub organizado e documentado
+- [x] Repositório GitHub organizado e documentado (README + ROADMAP)
 - [ ] Posts no LinkedIn contando o processo

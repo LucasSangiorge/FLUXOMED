@@ -4,3 +4,4 @@ __pycache__/
 .env
 .claude/
 doc/post-linkedin-*.md
+.pytest_cache/
